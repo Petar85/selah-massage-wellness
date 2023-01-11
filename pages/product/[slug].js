@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, createContext, useContext, useEffect } from 'react';
+import { toast } from 'react-hot-toast';
 import { client, urlFor } from "../../lib/client";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar }  from 'react-icons/ai';
 import { Product } from '../../components';
