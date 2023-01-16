@@ -4,7 +4,7 @@ import { Layout } from "../components";
 import '../styles/globals.css'
 import { StateContext } from '../context/StateContext';
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <StateContext>
       <Layout>
@@ -14,3 +14,5 @@ export default function App({ Component, pageProps }) {
     </StateContext>
   )
 }
+
+export default App;
