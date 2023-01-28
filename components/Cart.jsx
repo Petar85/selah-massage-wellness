@@ -5,6 +5,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from "../lib/client";
+import getStripe from "../lib/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -67,6 +68,11 @@ const Cart = () => {
             <div className="total">
               <h3>Subtotal:</h3>
               <h3>${totalPrice}</h3>
+            </div>
+            <div className="btn-container">
+              <button type="button" className="btn" onClick={ handleCheckout }>
+                Pay With Stripe
+              </button>
             </div>
           </div>
         )}
